@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>students profile</title>
+    <link rel="stylesheet" href="{% static 'students/css/style.css'%}">
+</head>
+<body>
+    <h1>Students profile</h1>
+    <img src="{% stactic 'students/images/logo.png' %}" width="150">
+    {% if Student  %}
+    <h2>{{Student.name}}</h2>
+    <img src="{{ Student.photo.url}}"  width="200">
+    {% else %}
+    <p>no student yet</p>
+    {% end if %}
+</body>
+</html>
